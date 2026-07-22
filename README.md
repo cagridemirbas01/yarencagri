@@ -63,7 +63,7 @@ Linkler henüz örnek olduğu için Form/Maps gerçek linklerle değişince çal
 ```powershell
 cd "$env:USERPROFILE\Desktop\webnisan"
 git init
-git add index.html styles.css README.md
+git add index.html styles.css script.js README.md
 git commit -m "Nişan davet sitesi: RSVP, konum ve foto butonları"
 git branch -M main
 git remote add origin https://github.com/cagridemirbas01/nisan.git
@@ -86,8 +86,9 @@ WhatsApp / SMS ile Pages linkini paylaşın.
 
 ```
 webnisan/
-├── index.html   ← sayfa + buton linkleri
+├── index.html   ← sayfa + buton linkleri + menü + geri sayım
 ├── styles.css   ← görünüm
+├── script.js    ← menü + geri sayım
 └── README.md    ← bu rehber
 ```
 

@@ -17,7 +17,46 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
+    <nav class="nav" aria-label="Ana menü">
+      <a class="nav__brand" href="#ana">Yaren &amp; Çağrı</a>
+
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Menüyü aç"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#ana">Ana</a></li>
+        <li><a href="#detay">Detaylar</a></li>
+        <li><a href="#katilim">Katılım</a></li>
+        <li>
+          <a
+            href="https://maps.app.goo.gl/chuqAfJWiWUcHGz6A"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Konum
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://forms.gle/5bmWuhLpgk8Rg2KQ7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Fotoğraf
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="hero" id="ana">
       <div class="hero__media" aria-hidden="true"></div>
       <div class="hero__veil" aria-hidden="true"></div>
 
@@ -29,8 +68,31 @@
         </p>
         <p class="hero__meta">08 Ağustos 2026 · Cumartesi · 19:00</p>
 
+        <div
+          class="countdown"
+          id="countdown"
+          data-target="2026-08-08T19:00:00"
+          aria-live="polite"
+        >
+          <div class="countdown__item">
+            <span class="countdown__value" data-unit="days">0</span>
+            <span class="countdown__label">Gün</span>
+          </div>
+          <div class="countdown__item">
+            <span class="countdown__value" data-unit="hours">0</span>
+            <span class="countdown__label">Saat</span>
+          </div>
+          <div class="countdown__item">
+            <span class="countdown__value" data-unit="minutes">0</span>
+            <span class="countdown__label">Dakika</span>
+          </div>
+          <div class="countdown__item">
+            <span class="countdown__value" data-unit="seconds">0</span>
+            <span class="countdown__label">Saniye</span>
+          </div>
+        </div>
+
         <div class="hero__actions">
-          <!-- Kendi Google Form / Drive / Maps linklerinizi aşağıya yapıştırın -->
           <a
             class="btn btn--primary"
             href="https://forms.gle/RSVP_LINKINIZ"
@@ -80,7 +142,7 @@
             </div>
             <div>
               <dt>Yer</dt>
-              <dd>Kayabaşı Mahallesi Botanik Sokak T4 BLOK No: 7.4/A,<br />Başakşehir/İstanbul</dd>
+              <dd>Örnek Bahçe / Salon Adı<br />Mahalle, İlçe — İstanbul</dd>
             </div>
           </dl>
         </div>
@@ -118,5 +180,7 @@
     <footer class="footer">
       <p>Sevgilerle, Yaren &amp; Çağrı</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
