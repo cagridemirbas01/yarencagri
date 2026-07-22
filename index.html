@@ -8,6 +8,7 @@
       content="Nişan davetiyesi — katılım bildirimi, konum ve fotoğraf paylaşımı"
     />
     <title>Yaren & Çağrı — Nişan</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,7 +35,7 @@
       <ul class="nav__menu" id="nav-menu">
         <li><a href="#ana">Ana</a></li>
         <li><a href="#detay">Detaylar</a></li>
-        <li><a href="#program">Program</a></li>
+        <li><a href="#hava">Hava</a></li>
         <li><a href="#menu">Menü</a></li>
         <li><a href="#sss">SSS</a></li>
         <li><a href="#katilim">Katılım</a></li>
@@ -95,12 +96,7 @@
           >
             Katılım bildir
           </a>
-          <a
-            class="btn btn--secondary"
-            href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Yaren%20%26%20%C3%87a%C4%9Fr%C4%B1%20Ni%C5%9Fan&amp;dates=20260808T183000/20260808T230000&amp;details=18.30%20K%C4%B1z%20taraf%C4%B1%20(Y%C4%B1ld%C4%B1z%20ailesi)%0A19.00%20Erkek%20taraf%C4%B1%20(Demirba%C5%9F%20ailesi)&amp;location=Kayaba%C5%9F%C4%B1%20Mahallesi%20Botanik%20Sokak%20T4%20BLOK%20No%3A%207.4%2FA%2C%20Ba%C5%9Fak%C5%9Fehir%2F%C4%B0stanbul"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="btn btn--secondary" href="nisan.ics">
             Takvime ekle
           </a>
           <a
@@ -131,7 +127,7 @@
             </div>
             <div>
               <dt>Saat</dt>
-              <dd>18:30 — karşılama · 19:00 — tören</dd>
+              <dd>19:00</dd>
             </div>
             <div>
               <dt>Yer</dt>
@@ -143,13 +139,8 @@
           </dl>
 
           <div class="section__actions">
-            <a
-              class="btn btn--solid"
-              href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Yaren%20%26%20%C3%87a%C4%9Fr%C4%B1%20Ni%C5%9Fan&amp;dates=20260808T183000/20260808T230000&amp;details=18.30%20K%C4%B1z%20taraf%C4%B1%20(Y%C4%B1ld%C4%B1z%20ailesi)%0A19.00%20Erkek%20taraf%C4%B1%20(Demirba%C5%9F%20ailesi)&amp;location=Kayaba%C5%9F%C4%B1%20Mahallesi%20Botanik%20Sokak%20T4%20BLOK%20No%3A%207.4%2FA%2C%20Ba%C5%9Fak%C5%9Fehir%2F%C4%B0stanbul"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Google Takvim’e ekle
+            <a class="btn btn--solid" href="nisan.ics">
+              Takvime ekle
             </a>
             <a
               class="btn btn--outline"
@@ -163,33 +154,7 @@
         </div>
       </section>
 
-      <section class="section section--soft" id="program">
-        <div class="section__inner">
-          <h2>Program</h2>
-          <p class="section__text">
-            Gün içinde ailelerin geliş saatleri aşağıdaki gibidir.
-          </p>
-
-          <ol class="timeline">
-            <li>
-              <span class="timeline__time">18:30</span>
-              <div>
-                <strong>Kız tarafı gelecek</strong>
-                <p>Yıldız ailesi</p>
-              </div>
-            </li>
-            <li>
-              <span class="timeline__time">19:00</span>
-              <div>
-                <strong>Erkek tarafı gelecek</strong>
-                <p>Demirbaş ailesi</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section" id="menu">
+      <section class="section section--soft" id="menu">
         <div class="section__inner">
           <h2>Yemek menüsü</h2>
           <p class="section__text">
@@ -206,7 +171,7 @@
         </div>
       </section>
 
-      <section class="section section--soft" id="sss">
+      <section class="section" id="sss">
         <div class="section__inner">
           <h2>Sıkça sorulanlar</h2>
 
@@ -222,7 +187,7 @@
         </div>
       </section>
 
-      <section class="section" id="katilim">
+      <section class="section section--soft" id="katilim">
         <div class="section__inner">
           <h2>Katılım &amp; fotoğraflar</h2>
           <p class="section__text">
@@ -250,7 +215,7 @@
         </div>
       </section>
 
-      <section class="section section--soft" id="iletisim">
+      <section class="section" id="iletisim">
         <div class="section__inner">
           <h2>İletişim</h2>
           <p class="section__text">
@@ -265,6 +230,26 @@
             >
               WhatsApp: 0532 368 45 85
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="hava">
+        <div class="section__inner">
+          <h2>Hava durumu</h2>
+          <p class="section__text">
+            Başakşehir / İstanbul — nişan günü ve bölge için güncel bilgi.
+          </p>
+
+          <div
+            class="weather"
+            id="weather"
+            data-lat="41.093"
+            data-lon="28.802"
+            data-date="2026-08-08"
+            aria-live="polite"
+          >
+            <p class="weather__status">Hava bilgisi yükleniyor…</p>
           </div>
         </div>
       </section>
